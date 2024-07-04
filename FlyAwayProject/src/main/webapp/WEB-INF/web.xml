@@ -1,0 +1,11 @@
+<!-- src/main/webapp/WEB-INF/web.xml -->
+<web-app>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.flyaway.servlets.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+</web-app>
