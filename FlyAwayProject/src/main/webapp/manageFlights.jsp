@@ -5,15 +5,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>FlyAway - Search Results</title>
+    <title>FlyAway - Manage Flights</title>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/styles.css">
 </head>
 <body>
     <header>
-        <h1>FlyAway</h1>
+        <h1>FlyAway Admin</h1>
     </header>
     <div class="container">
-        <h2>Search Results</h2>
+        <h2>Manage Flights</h2>
         <table class="table">
             <thead>
                 <tr>
@@ -22,7 +22,6 @@
                     <th>Destination</th>
                     <th>Airline</th>
                     <th>Ticket Price</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,16 +37,12 @@
                     <td><%= flight.getDestination() %></td>
                     <td><%= flight.getAirline() %></td>
                     <td><%= flight.getTicketPrice() %></td>
-                    <td><a href="booking?flightId=<%= flight.getId() %>" class="btn-primary">Book Now</a></td>
                 </tr>
                 <% 
                         }
                     } else {
-                %>
-                <tr>
-                    <td colspan="6">No flights found</td>
-                </tr>
-                <% 
+                        // Handle case where flights are not found or not of expected type
+                        // You can put an error message or handle it as per your application logic
                     }
                 %>
             </tbody>
